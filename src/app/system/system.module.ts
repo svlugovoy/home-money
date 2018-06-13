@@ -9,10 +9,13 @@ import { HistoryPageComponent } from './history-page/history-page.component';
 import { PlanningPageComponent } from './planning-page/planning-page.component';
 import { RecordsPageComponent } from './records-page/records-page.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import {DropdownDirective} from './shared/directives/dropdown.directive';
 
 
 @NgModule({
-  declarations: [SystemComponent, BillPageComponent, HistoryPageComponent, PlanningPageComponent, RecordsPageComponent, SidebarComponent],
+  declarations: [SystemComponent, BillPageComponent, HistoryPageComponent, PlanningPageComponent,
+   RecordsPageComponent, SidebarComponent, HeaderComponent, DropdownDirective],
   imports: [CommonModule, SharedModule, SystemRoutingModule]
 })
 export class SystemModule {}
