@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {AuthModule} from './auth/auth.module';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpModule} from '@angular/http';
+import {UsersService} from './shared/services/users.service';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import {HttpModule} from '@angular/http';
     BrowserModule, HttpModule,
     AuthModule, AppRoutingModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
