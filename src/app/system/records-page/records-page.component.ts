@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Category} from '../shared/models/category.model';
 
 @Component({
   selector: 'wfm-records-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecordsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  newCategoryAdded(category: Category) {
+    // add to array
   }
 
 }
