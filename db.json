@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 1000,
     "currency": "EUR"
   },
   "categories": [
@@ -34,8 +34,8 @@
       "capacity": 7000
     },
     {
-      "name": "FirstJob2",
-      "capacity": 11,
+      "name": "ASD",
+      "capacity": 10005,
       "id": 4
     }
   ],
