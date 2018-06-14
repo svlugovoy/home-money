@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 1000,
+    "value": 98778,
     "currency": "EUR"
   },
   "categories": [
@@ -35,7 +35,7 @@
     },
     {
       "name": "ASD",
-      "capacity": 10005,
+      "capacity": 10,
       "id": 4
     }
   ],
@@ -79,6 +79,30 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "outcome",
+      "amount": 1200,
+      "category": 3,
+      "date": "14.06.2018 22.04.07",
+      "description": "1222",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 11,
+      "category": 4,
+      "date": "14.06.2018 22.05.15",
+      "description": "test",
+      "id": 7
+    },
+    {
+      "type": "outcome",
+      "amount": 11,
+      "category": 4,
+      "date": "14.06.2018 22.07.09",
+      "description": "eee",
+      "id": 8
     }
   ]
 }

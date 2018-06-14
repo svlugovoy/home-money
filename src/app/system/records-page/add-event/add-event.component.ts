@@ -49,7 +49,7 @@ export class AddEventComponent implements OnInit, OnDestroy {
       amount *= -1;
     }
 
-    console.log(form.value);
+    // console.log(form.value);
 
     const event = new WfmEvent(type, amount, +category, moment().format('DD.MM.YYYY HH.mm.ss'), description);
 
