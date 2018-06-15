@@ -20,6 +20,7 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
   events: WfmEvent[] = [];
 
   isLoaded = false;
+  isFilterVisible = false;
 
   chartData = [];
 
@@ -41,12 +42,6 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy(): void {
-    if (this.sub1) {
-      this.sub1.unsubscribe();
-    }
-  }
-
   calculateChartData(): void {
     this.chartData = [];
     this.categories.forEach((cat) => {
@@ -59,5 +54,28 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
         }, 0)
       });
     });
+  }
+
+  private toggleFilterVisibility(dir: boolean) {
+    this.isFilterVisible = dir;
+  }
+
+  openFilter() {
+    this.toggleFilterVisibility(true);
+  }
+
+  onFilterApply(filterData) {
+    console.log(filterData);
+  }
+
+  onFilterCancel() {
+    this.toggleFilterVisibility(false);
+  }
+
+
+  ngOnDestroy(): void {
+    if (this.sub1) {
+      this.sub1.unsubscribe();
+    }
   }
 }
