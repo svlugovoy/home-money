@@ -14,7 +14,7 @@
 <div *ngIf="isLoaded">
   <wfm-history-chart [data]="chartData"></wfm-history-chart>
 
-  <wfm-history-events [categories]="categories" [events]="events"></wfm-history-events>
+  <wfm-history-events [categories]="categories" [events]="filtredEvents"></wfm-history-events>
 
   <div *ngIf="isFilterVisible">
     <!--MODAL-->
