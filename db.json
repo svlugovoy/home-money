@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 98778,
+    "value": 97778,
     "currency": "EUR"
   },
   "categories": [
@@ -103,6 +103,14 @@
       "date": "14.06.2018 22.07.09",
       "description": "eee",
       "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 4,
+      "date": "15.06.2018 12.08.46",
+      "description": "qqq",
+      "id": 9
     }
   ]
 }

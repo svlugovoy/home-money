@@ -4,10 +4,15 @@
   </h3>
 </div>
 
-<wfm-history-chart></wfm-history-chart>
+<div *ngIf="!isLoaded" class="text-center">Loading...</div>
 
-<wfm-history-events></wfm-history-events>
+<div *ngIf="isLoaded">
+  <wfm-history-chart [data]="chartData"></wfm-history-chart>
 
-<!--MODAL-->
-<wfm-history-filter></wfm-history-filter>
-<!--MODAL-->
+  <wfm-history-events></wfm-history-events>
+
+  <!--MODAL-->
+  <wfm-history-filter></wfm-history-filter>
+  <!--MODAL-->
+
+</div>
