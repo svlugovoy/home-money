@@ -24,12 +24,13 @@ import { HistoryChartComponent } from './history-page/history-chart/history-char
 import { HistoryEventsComponent } from './history-page/history-events/history-events.component';
 import { HistoryDetailComponent } from './history-page/history-detail/history-detail.component';
 import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
+import {FilterPipe} from './shared/pipes/filter.pipe';
 
 
 @NgModule({
   declarations: [SystemComponent, BillPageComponent, HistoryPageComponent, PlanningPageComponent,
     RecordsPageComponent, SidebarComponent, HeaderComponent, DropdownDirective, BillCardComponent, CurrencyCardComponent,
-    MomentPipe,
+    MomentPipe, FilterPipe,
     AddEventComponent,
     AddCategoryComponent,
     EditCategoryComponent,
