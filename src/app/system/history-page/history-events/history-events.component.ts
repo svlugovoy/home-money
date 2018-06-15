@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Category} from '../../shared/models/category.model';
+import {WfmEvent} from '../../shared/models/event.model';
 
 @Component({
   selector: 'wfm-history-events',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryEventsComponent implements OnInit {
 
-  constructor() { }
+  @Input() categories: Category[] = [];
+  @Input() events: WfmEvent[] = [];
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.events.forEach((e) => {
+      e.catName = this.categories.find(c => c.id === e.category).name;
+    });
+  }
+
+  getEventClass(e: WfmEvent) {
+    return {
+      'label': true,
+      'label-danger': e.type === 'outcome',
+      'label-success': e.type === 'income'
+    };
   }
 
 }
