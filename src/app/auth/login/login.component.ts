@@ -7,6 +7,7 @@ import {User} from '../../shared/models/user.model';
 import {Message} from '../../shared/models/message.model';
 import {AuthService} from '../../shared/services/auth.service';
 import {fadeStateTrigger} from '../../shared/animations/fade.animation';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'wfm-login',
@@ -22,7 +23,14 @@ export class LoginComponent implements OnInit {
   constructor(private usersService: UsersService,
               private authService: AuthService,
               private router: Router,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private title: Title,
+              private meta: Meta) {
+    title.setTitle('Вход в систему');
+    meta.addTags([
+      {name: 'keywords', content: 'логин,вход,система'},
+      {name: 'description', content: 'Страница для входа в систему'}
+    ]);
   }
 
   ngOnInit() {
@@ -30,7 +38,7 @@ export class LoginComponent implements OnInit {
     this.message = new Message('danger', '');
 
     this.route.queryParams
-      .subscribe( (params: Params) => {
+      .subscribe((params: Params) => {
         if (params['nowCanLogin']) {
           this.showMessage({text: 'Теперь вы можете зайти в систему.', type: 'success'});
         } else if (params['accessDenied']) {
@@ -46,7 +54,7 @@ export class LoginComponent implements OnInit {
 
   private showMessage(message: Message) {
     this.message = message;
-    window.setTimeout( () => {
+    window.setTimeout(() => {
       this.message.text = '';
     }, 5000);
   }
