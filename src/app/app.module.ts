@@ -11,11 +11,12 @@ import {UsersService} from './shared/services/users.service';
 import {AuthService} from './shared/services/auth.service';
 import {BaseApi} from './shared/core/base-api';
 import {AuthGuard} from './system/shared/services/auth.guard';
+import {NotFoundComponent} from './shared/components/not-found/not-found.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, NotFoundComponent
   ],
   imports: [
     BrowserModule, HttpModule, BrowserAnimationsModule,
