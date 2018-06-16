@@ -10,6 +10,7 @@ import {HttpModule} from '@angular/http';
 import {UsersService} from './shared/services/users.service';
 import {AuthService} from './shared/services/auth.service';
 import {BaseApi} from './shared/core/base-api';
+import {AuthGuard} from './system/shared/services/auth.guard';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import {BaseApi} from './shared/core/base-api';
     BrowserModule, HttpModule, BrowserAnimationsModule,
     AuthModule, AppRoutingModule
   ],
-  providers: [UsersService, AuthService, BaseApi],
+  providers: [UsersService, AuthService, BaseApi, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
